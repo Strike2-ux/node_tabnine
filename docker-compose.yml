@@ -18,5 +18,12 @@ services:
     ports: 
     - "3001:3001"
     environment:
-      -POSTGRES_USER
-      -POSTGRES_PASSWORD
+      - POSTGRES_USER="francesco"
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=tabnine_db
+    volumes:
+      - nps_data:/var/lib/postgres/data
+
+volumes:
+  nps_data: {}
+
